@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<header>
+    <h1>My Website</h1>
+<nav>
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('product')">Product</button>
+<button onclick="showPage('todo')">To Do List</button>
+<button onclick="showPage('contact')">Contact</button>
+</nav>
+</header>
+
+<!-- HOME -->
+<div id="home" class="page">
+<h2>Home</h2>
+<p>Welcome to my website .</p>
+</div>
+
+<!-- PRODUCT -->
+<div id="product" class="page">
+
+<h2>Product Listing</h2>
+
+<select id="category" onchange="updateProducts()">
+<option value="all">All</option>
+<option value="electronics">Electronics</option>
+<option value="clothing">Clothing</option>
+</select>
+
+<select id="sort" onchange="updateProducts()">
+<option value="default">Sort</option>
+<option value="low">Price Low to High</option>
+<option value="high">Price High to Low</option>
+</select>
+
+<div id="productList"></div>
+
+</div>
+
+<!-- TODO -->
+<div id="todo" class="page">
+
+<h2>To Do List</h2>
+
+<input id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add</button>
+
+<ul id="taskList"></ul>
+
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+
+<h2>Contact</h2>
+
+<input placeholder="Name"><br><br>
+<input placeholder="Email"><br><br>
+<textarea placeholder="Message"></textarea><br><br>
+
+<button>Submit</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
